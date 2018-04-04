@@ -7,10 +7,14 @@ void processVideoExample(Mat frame,VideoMeta meta);
 
 int main() {
     try {
+        // 1: create VideoProcess Instance with the location of the video.
+        // best idea is to write the full  path to it.
         auto vp = VideoProcess("../videoDummy2.mp4");
 
 //        vp.play(); // just play the video if you want
 
+        // 2: call the process method and
+        // pass to it the name of function that going to handle each frame
         vp.process(processVideoExample);
 
     }catch(...){
@@ -19,6 +23,8 @@ int main() {
     return 0;
 }
 
+// 3: you need to define function with this signature.
+// the name isn't must be as below as long as you give the same name to vp.process()
 void processVideoExample(Mat frame,VideoMeta meta){
 
     cout << "START processing frame number: " << meta.currentFrameNumber<< endl;
