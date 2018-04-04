@@ -38,7 +38,7 @@ void processVideoExample(Mat frame,VideoMeta meta){
     imshow(window_name, frame);
     waitKey(10);//this line can be commented is here just for the imshow to work properly
     //Example calc picture avg
-    //https://docs.opencv.org/2.4/doc/user_guide/ug_mat.html
+    //for more info --->> https://docs.opencv.org/2.4/doc/user_guide/ug_mat.html
     const int numOfPixels = frame.cols*frame.rows;
     double sum = 0;
     for (int col = 0; col < frame.cols; ++col) {
