@@ -7,6 +7,6 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(VideoProcess main.cpp)
+add_executable(VideoProcess main.cpp VideoProcess.cpp VideoProcess.h)
 
 target_link_libraries(VideoProcess ${OpenCV_LIBS})
